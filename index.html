@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      ミライキャリアJOURNEY｜徳島で働く選択肢を増やす高校生向けインターン
+    </title>
+    <meta
+      name="description"
+      content="高校生が徳島の企業で仕事を体験し、進路や将来を考えるきっかけをつくるインターンシッププログラム「ミライキャリアJOURNEY」。説明会・職場体験・動画制作・最終発表会まで一連で学べます。"
+    />
+    <meta name="robots" content="index,follow" />
+    <!-- canonical は本番URLに差し替え -->
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- OGP（本番に合わせて差し替え） -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:title" content="ミライキャリアJOURNEY" />
+    <meta
+      property="og:description"
+      content="徳島で働く選択肢を増やす高校生向けインターンシップ。説明会・職場体験・動画制作・最終発表会。"
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/ogp.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Adobe Fonts -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "scq2rfp",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="./css/distyle.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- 構造化データ（FAQ + イベント系は後述で追記推奨） -->
+  </head>
+
+  <body id="top">
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <p class="giga">ミライキャリアJORNEY</p>
+
+        <nav aria-label="グローバルナビゲーション">
+          <ul class="gnav giga">
+            <li><a href="#concept">コンセプト</a></li>
+            <li><a href="#company">参加企業</a></li>
+            <li><a href="#schedule">日程</a></li>
+            <li><a href="#comments">参加者の声</a></li>
+            <li><a href="#faq">Q&amp;A</a></li>
+            <li class="btn">
+              <a href="#apply">参加申込</a>
+            </li>
+          </ul>
+
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+            aria-controls="global-menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- ed header -->
+
+    <main id="main">
+      <!-- hero -->
+      <section class="hero" aria-label="メインビジュアル">
+        <!-- 背景をCSSで当ててるならdivのままでOK。imgにできるならこちらがベター -->
+        <div
+          class="hero-bg"
+          role="img"
+          aria-label="都市の夜景とテクノロジーを想起させるビジュアル"
+        ></div>
+
+        <div class="container hero-inner">
+          <p class="hero-subtext">
+            「徳島」で働く選択肢を、<br />
+            あなたの中にプラスするインターンシップ
+          </p>
+
+          <h1 class="hero-title giga">
+            ミライ<br />
+            キャリア<br />
+            JOURNEY
+          </h1>
+        </div>
+      </section>
+      <!-- ed hero -->
+
+      <canvas id="meteor-canvas" aria-hidden="true"></canvas>
+
+      <!-- concept -->
+      <section
+        id="concept"
+        class="container concept"
+        aria-labelledby="concept-title"
+      >
+        <h2 class="giga" id="concept-title">
+          ミライキャリアJORNEY<br />とは？
+        </h2>
+
+        <div class="concept-box">
+          <p class="concept-title">CONCEPT</p>
+          <p>
+            高校生が地域の企業で働く姿をより具体的に思い描けるよう、インターンシップを通して企業の魅力を直接知るプロジェクトです。地元・徳島で働くことを知り、仕事にふれながら、進路や将来について考えるきっかけをつくります。地域と次世代をつなぐ架け橋として、未来への一歩を踏み出してみませんか？
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <ul class="flex" role="list">
+            <li class="concept-card-box">
+              <img
+                src="./img/icon01.png"
+                alt="学生が企業を体験している様子"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="concept-subtitle">POINT.01</p>
+              <p class="concept-text">
+                地元企業の魅力を、実際の現場で体感できる!
+              </p>
+            </li>
+
+            <li class="concept-card-box">
+              <img
+                src="./img/icon02.png"
+                alt="インターンシップを通じて進路や将来を考えている様子"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="concept-subtitle">POINT.02</p>
+              <p class="concept-text">将来や進路を考える 視野が広がる！</p>
+            </li>
+
+            <li class="concept-card-box">
+              <img
+                src="./img/icon03.png"
+                alt="インターンシップを通じてコミュニケーション力が身につく様子"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="concept-subtitle">POINT.03</p>
+              <p class="concept-text">コミュニケーション力が身につく！</p>
+            </li>
+          </ul>
+
+          <div class="outro-text">
+            <p>
+              <span class="marker">「働くって、どんな感じなんだろう？」</span
+              ><br />
+              そんな疑問を、実際の仕事にふれながら確かめてみませんか？<br />
+              インターンシップでは学校では知ることのできない仕事や大人のリアルに出会えます。<br />
+              地元・徳島で働く選択肢を知ることが、あなたの将来を考えるヒントになるはずです。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ed concept -->
+
+      <!-- company -->
+      <section
+        id="company"
+        class="container company"
+        aria-labelledby="company-title"
+      >
+        <h2 class="company-title giga" id="company-title">COMPANYS</h2>
+        <p class="sub-title">参加企業</p>
+
+        <div class="photo-grid" role="list">
+          <div class="item item-a" role="listitem">
+            <img
+              src="./img/img01.jpeg"
+              alt="株式会社 北島建設の職場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>株式会社 北島建設</p>
+              <p class="item-subtext">
+                徳島に根ざした建設会社。「建築」と「土木」の両面から、住宅や公共施設など地図に残る仕事のやりがいを、設計・施工の現場で学びます。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-b" role="listitem">
+            <img
+              src="./img/img02.jpeg"
+              alt="アウトクラスカーズの職場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>アウトクラスカーズ</p>
+              <p class="item-subtext">
+                徳島発のカスタムカー専門店。ジムニーを中心とした車両販売・整備や、アウトドアライフの提案など、"好き"を仕事にする現場を体感できます。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-c" role="listitem">
+            <img
+              src="./img/img03.jpeg"
+              alt="喜多機械産業株式会社の職場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>喜多機械産業株式会社</p>
+              <p class="item-subtext">
+                まちづくりを支える建設機械のレンタル・販売・修理を展開。多種多様な機械を扱い、インフラ整備の裏側を支える重要な役割を体験します。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-d" role="listitem">
+            <img
+              src="./img/img04.jpeg"
+              alt="株式会社フジタ建設コンサルタントの職場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>株式会社フジタ建設コンサルタント</p>
+              <p class="item-subtext">
+                地域の社会基盤を支える技術者集団。道路や河川などの測量・設計・調査を通じて、安全で安心なまちづくりの基礎（プランニング）を学びます。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-e" role="listitem">
+            <img
+              src="./img/img05.jpeg"
+              alt="株式会社ANDの職場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>株式会社AND</p>
+              <p class="item-subtext">
+                デザインとITで地域を元気にするクリエイティブ企業。Webサイト制作やイベント企画など、アイデアを形にして発信するプロセスを体験します。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-f" role="listitem">
+            <img
+              src="./img/img06.jpeg"
+              alt="東光株式会社の職場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>東光株式会社</p>
+              <p class="item-subtext">
+                医療用弾性ストッキングやサポーターの製造販売メーカー。国内一貫生産にこだわり、確かな技術で人々の健康を足元から支えるものづくりを体験します。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-g" role="listitem">
+            <img
+              src="./img/img07.jpeg"
+              alt="ナーサリー富田幼児園の活動イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>ナーサリー富田幼児園</p>
+              <p class="item-subtext">
+                「生きる力」を育む幼児教育・保育の現場。子どもたち一人ひとりと向き合い、成長を支える先生の仕事のやりがいや責任を肌で感じられます。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-h" role="listitem">
+            <img
+              src="./img/img08.jpeg"
+              alt="徳島ヴォルティス株式会社の運営イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>徳島ヴォルティス株式会社</p>
+              <p class="item-subtext">
+                Jリーグ加盟のプロサッカークラブ運営。試合運営、広報、ホームタウン活動など、スポーツを通じて地域を活性化させる仕事を学びます。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-i" role="listitem">
+            <img
+              src="./img/img09.jpeg"
+              alt="株式会社エフエムびざんの放送制作イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>株式会社エフエムびざん</p>
+              <p class="item-subtext">
+                地域密着のコミュニティFM放送局（B-FM791）。ラジオ番組の制作や生放送の現場に触れ、声と音で地域情報を届けるメディアの役割を体験します。
+              </p>
+            </div>
+          </div>
+
+          <div class="item item-j" role="listitem">
+            <img
+              src="./img/img10.jpeg"
+              alt="株式会社 応神鉄工の製造現場イメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-text">
+              <p>株式会社 応神鉄工</p>
+              <p class="item-subtext">
+                建物の骨組みとなる「鉄骨」の製造。巨大な建築物を支えるダイナミックな鉄骨加工技術や、CADを使った図面作成など、ものづくりの真髄に触れます。
+              </p>
+            </div>
+          </div>
+
+          <dialog class="photo-modal" id="photo-modal" aria-label="企業詳細">
+            <button class="photo-modal-close" type="button" aria-label="閉じる">
+              ×
+            </button>
+
+            <div class="photo-modal-body">
+              <img class="photo-modal-img" alt="" />
+              <div class="photo-modal-text">
+                <h3 class="photo-modal-title"></h3>
+                <p class="photo-modal-desc"></p>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </section>
+      <!-- ed company -->
+
+      <!-- schedule -->
+      <section
+        id="schedule"
+        class="container-full schedule"
+        aria-labelledby="schedule-title"
+      >
+        <h2
+          class="giga"
+          id="schedule-title"
+          style="
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+          "
+        >
+          日程
+        </h2>
+
+        <div class="scrolly" id="scrolly" aria-label="紙芝居セクション">
+          <div class="scrolly__pin">
+            <div class="scene fade" id="scene">
+              <div class="scene__text">
+                <p class="scene__kicker" id="kicker"></p>
+                <h3 class="scene__title" id="title"></h3>
+                <p class="scene__desc" id="desc"></p>
+                <p class="scene__meta" id="meta"></p>
+              </div>
+              <div class="scene__img">
+                <img id="img" src="" alt="" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <div class="scenes-source" aria-hidden="true">
+            <article
+              class="scene-data"
+              data-kicker="2月1日(日)"
+              data-title="説明会"
+              data-img="./img/img12.jpg"
+            >
+              <p class="scene-desc">
+                プログラムの全体像、参加企業の紹介、インターンシップに向けた準備について説明します。参加者同士の顔合わせも行います。
+              </p>
+              <p class="scene-meta">会場：とくぎんトモニプラザ</p>
+            </article>
+
+            <article
+              class="scene-data"
+              data-kicker="2月5日(木)・6日(金)・9(月)・12日(木)・13日(金)"
+              data-title="インターン実施"
+              data-img="./img/img13.jpg"
+            >
+              <p class="scene-desc">
+                各企業での実践的な職場体験。実際の業務に触れ、社員の方々と交流しながら「働く」を体感します。1日で、地域企業の多様な魅力を発見できます。
+              </p>
+              <p class="scene-meta">時間：9:00〜17:00（各社にて実施）</p>
+            </article>
+
+            <article
+              class="scene-data"
+              data-kicker="2月15日(日)"
+              data-title="動画編集ワークショップ"
+              data-img="./img/img14.jpg"
+            >
+              <p class="scene-desc">
+                インターンシップの経験を振り返り、学んだことを動画にまとめます。自分の言葉で経験を表現することで、学びをより深めます。
+              </p>
+              <p class="scene-meta">
+                午前：動画編集の基礎を学ぶ<br />午後：発表用動画を完成させる
+              </p>
+            </article>
+
+            <article
+              class="scene-data"
+              data-kicker="2月21日(土)"
+              data-title="最終発表会"
+              data-img="./img/img15.jpg"
+            >
+              <p class="scene-desc">
+                学んだこと、感じたこと、これからの目標を発表します。参加企業、保護者、関係者の前でのプレゼンテーションを通じて、成長を実感できます。
+              </p>
+              <p class="scene-meta">会場：徳島グランヴィリオホテル</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ed schedule -->
+
+      <!-- overview -->
+      <section class="overview container" aria-labelledby="overview-title">
+        <h2 class="overview-title giga" id="overview-title">OVERVIEW</h2>
+        <p class="sub-title">プログラム概要</p>
+
+        <div class="overview-item">
+          <ul class="flex" role="list">
+            <li class="overview-box">
+              <p class="overview-boxtitle">対象者</p>
+              <p>・徳島県内の高校1年生</p>
+              <p>・<span class="marker">定員：約30名</span></p>
+            </li>
+
+            <li class="overview-box">
+              <p class="overview-boxtitle">特徴</p>
+              <p>・1日の起業体験</p>
+              <p>・社員との対話</p>
+              <p>・動画制作体験</p>
+              <p>・プレゼン機会</p>
+              <p>・多様な業種を知る</p>
+            </li>
+
+            <li class="overview-box">
+              <p class="overview-boxtitle">メリット</p>
+              <p>・地元企業を直接体験</p>
+              <p>・働くことへの理解</p>
+              <p>・視野の拡大</p>
+              <p>・コミュニケーション力向上</p>
+              <p>・仲間との出会い</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ed overview -->
+
+      <!-- comments -->
+      <section
+        id="comments"
+        class="container comments"
+        aria-labelledby="comments-title"
+      >
+        <h2 class="comments-title giga" id="comments-title">COMMENTS</h2>
+        <p class="sub-title">参加者の声</p>
+
+        <div class="splide" role="group" aria-label="1枚表示のスライダー">
+          <div class="splide__track comments-box">
+            <ul class="splide__list">
+              <li class="splide__slide comments-item">
+                <img
+                  src="./img/icon04.png"
+                  alt="女子高生のアイコン"
+                  class="comments-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <p class="name-title">城南高校 2年生（参加時1年生）</p>
+                  <p class="name-text">
+                    「将来のことをぼんやりとしか考えていなかったのですが、このインターンシップを通じて働く』ということが具体的にイメージできるようになりました。特にIT企業での体験が印象的で、プログラミングの面白さを知ることができました。動画編集やプレゼンの経験も自信につながりました。」
+                  </p>
+                </div>
+              </li>
+
+              <li class="splide__slide comments-item">
+                <img
+                  src="./img/icon05.png"
+                  alt="男子高校生のアイコン"
+                  class="comments-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <p class="name-title">小松島高校 3年生（参加時2年生）</p>
+                  <p class="name-text">
+                    訪れた企業ごとに、働く環境や仕事の進め方の違いを実際に体験し、同じ仕事でも業界や企業によって雰囲気や求められる力が大きく異なることを知りました。特にチームで協力する場面を通して、コミュニケーションの大切さを実感し、今後は日常生活でも周囲との関わりを意識していきたいと思いました。
+                  </p>
+                </div>
+              </li>
+
+              <li class="splide__slide comments-item">
+                <img
+                  src="./img/icon06.png"
+                  alt="男子高校生のアイコン2"
+                  class="comments-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <p class="name-title">科学技術高等 2年生（参加時1年生）</p>
+                  <p class="name-text">
+                    インターンシップツアーを通して、仕事は一人で行うものではなく、多くの人の役割が重なって成り立っていることを知りました。社員の方のお話を聞く中で、失敗や工夫を積み重ねながら仕事に向き合っている姿が印象に残り、働くことへの考え方が少し変わりました。
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ed comments -->
+
+      <!-- faq -->
+      <section id="faq" class="container faq" aria-labelledby="faq-title">
+        <h2 class="faq-title giga" id="faq-title">Q&amp;A</h2>
+        <p class="sub-title">よくある質問</p>
+
+        <div class="faq-box">
+          <ul role="list">
+            <li class="faq-item">
+              <details>
+                <summary><h3>参加費用はかかりますか？</h3></summary>
+                <p>
+                  参加費用は無料です。ただし、会場までの交通費は各自でご負担いただきます。
+                </p>
+              </details>
+            </li>
+
+            <li class="faq-item">
+              <details>
+                <summary><h3>全日程に参加する必要がありますか？</h3></summary>
+                <p>
+                  はい。説明会からインターンシップ、動画編集ワークショップ、最終発表会まで、すべての日程に参加できることが条件となります。
+                </p>
+              </details>
+            </li>
+
+            <li class="faq-item">
+              <details>
+                <summary>
+                  <h3>インターンシップ先の企業は選べますか？</h3>
+                </summary>
+                <p>
+                  希望調査を行い、できる限り希望に沿うよう調整しますが、参加人数の都合上、必ずしも第一希望の企業に配属されるとは限りません。
+                </p>
+              </details>
+            </li>
+
+            <li class="faq-item">
+              <details>
+                <summary><h3>服装や持ち物はどうすればいいですか？</h3></summary>
+                <p>
+                  説明会では詳細をお伝えしますが、基本的には動きやすい服装（制服可）、筆記用具、ノート等をご用意ください。企業によっては作業着等を貸与いただく場合もあります。
+                </p>
+              </details>
+            </li>
+
+            <li class="faq-item">
+              <details>
+                <summary><h3>保護者の同意は必要ですか？</h3></summary>
+                <p>
+                  はい。参加にあたっては保護者の同意が必要です。申込時に保護者の同意書を提出していただきます。
+                </p>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ed faq -->
+
+      <section class="container-full cta giga" id="apply" aria-label="参加申込">
+        <div class="cta-inner">
+          <img
+            src="./img/img11.jpg"
+            alt="学生と大人が打ち合わせをしている様子"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <div class="cta-content">
+            <p>あなたの「みらい」一緒につくりませんか？</p>
+            <a href="#" class="cta-btn">参加申込はこちら</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <p class="footer-titile giga" aria-hidden="true">
+              ミライキャリアJORNEY
+            </p>
+            <p class="footer-text">
+              この事業は、地域と次世代をつなぐ架け橋として、若者の地域定着と企業価値向上を目指しています。単なる職場体験ではなく、地域の未来を共に創造するプログラムです。
+            </p>
+          </div>
+
+          <nav class="footer-nav" aria-label="フッターナビ">
+            <ul class="footer-list">
+              <li><a class="footer-link" href="#concept">CONCEPT</a></li>
+              <li><a class="footer-link" href="#company">COMPANY</a></li>
+              <li><a class="footer-link" href="#comments">COMMENTS</a></li>
+              <li><a class="footer-link" href="#faq">Q&amp;A</a></li>
+              <li><a class="footer-link" href="#privacy">PRIVACY POLICY</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <small class="footer-copy"
+            >© <span id="js-year"></span> 2026 徳島商工会議所青年部（YEG） All
+            Rights Reserved.</small
+          >
+
+          <a class="footer-toplink" href="#top" aria-label="ページ上部へ">↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- FAQ構造化データ（内容と一致させる） -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "参加費用はかかりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "参加費用は無料です。ただし、会場までの交通費は各自でご負担いただきます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "全日程に参加する必要がありますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。説明会からインターンシップ、動画編集ワークショップ、最終発表会まで、すべての日程に参加できることが条件となります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "インターンシップ先の企業は選べますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "希望調査を行い、できる限り希望に沿うよう調整しますが、参加人数の都合上、必ずしも第一希望の企業に配属されるとは限りません。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "服装や持ち物はどうすればいいですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "説明会では詳細をお伝えしますが、基本的には動きやすい服装（制服可）、筆記用具、ノート等をご用意ください。企業によっては作業着等を貸与いただく場合もあります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "保護者の同意は必要ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。参加にあたっては保護者の同意が必要です。申込時に保護者の同意書を提出していただきます。"
+            }
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>
