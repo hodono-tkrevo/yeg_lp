@@ -96,20 +96,24 @@ const splide = new Splide(".splide", {
   const isSP = () => matchMedia("(hover: none) and (pointer: coarse)").matches;
 
   const openFromItem = (item) => {
-    const titleNode = item.querySelector(".item-text");
-    const descNode = item.querySelector(".item-subtext");
+    const textWrap = item.querySelector(".item-text");
     const imgNode = item.querySelector("img");
 
-    // item-text は「テキスト + p」が入ってるので、タイトルは先頭テキストだけ拾う
-    const title = titleNode
-      ? (titleNode.childNodes[0]?.textContent || "").trim()
-      : "";
+    // ✅ タイトル/本文を「.item-text 内の p」から安定して取得
+    const ps = textWrap ? [...textWrap.querySelectorAll("p")] : [];
+    const title = (ps[0]?.textContent || "").trim();
 
-    const desc = descNode ? descNode.textContent.trim() : "";
+    // 2つ目のpがあればそれを説明に。なければ .item-subtext を探す。さらに無ければ空。
+    const desc =
+      (ps[1]?.textContent || "").trim() ||
+      (textWrap?.querySelector(".item-subtext")?.textContent || "").trim() ||
+      (item.querySelector(".item-subtext")?.textContent || "").trim() ||
+      "";
 
     const src = imgNode ? imgNode.getAttribute("src") : "";
     const alt = imgNode ? imgNode.getAttribute("alt") : title;
 
+    // モーダルへ反映
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
 
@@ -126,16 +130,17 @@ const splide = new Splide(".splide", {
     dialog.showModal();
   };
 
+  // ✅ SPだけクリックでモーダル表示（PCはhover想定）
   document.querySelectorAll(".photo-grid .item").forEach((item) => {
     item.addEventListener("click", () => {
-      if (!isSP()) return; // PCはhoverで見せる
+      if (!isSP()) return;
       openFromItem(item);
     });
   });
 
-  closeBtn.addEventListener("click", () => dialog.close());
+  closeBtn?.addEventListener("click", () => dialog.close());
 
-  // 背景クリックで閉じる（dialog外側クリック判定）
+  // ✅ 背景クリックで閉じる（dialog外側クリック判定）
   dialog.addEventListener("click", (e) => {
     const rect = dialog.getBoundingClientRect();
     const inDialog =
