@@ -21,7 +21,13 @@ const scenes = nodes.map((n) => ({
 }));
 
 // シーン数に合わせて高さを自動設定（1シーン=100vh）
-scrolly.style.height = `${scenes.length * 100}vh`;
+const isSP = window.matchMedia("(max-width: 768px)").matches;
+
+// SPは1シーンあたり長めにする
+const SCENE_VH = isSP ? 150 : 100;
+
+// シーン数に合わせて高さを自動設定
+scrolly.style.height = `${scenes.length * SCENE_VH}vh`;
 
 let current = -1;
 
