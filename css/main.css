@@ -151,6 +151,18 @@ body {
   font-weight: bold;
 }
 
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 /* =========Hero========= */
 .hero {
   position: relative;
@@ -232,7 +244,7 @@ body {
 }
 
 .concept-card {
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .concept-card-box {
@@ -299,6 +311,22 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.item-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  padding: 6px 12px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  background: var(--green);
+  color: #ffffff;
+  border-radius: 999px;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 /* 既存のgrid配置 */
@@ -594,6 +622,7 @@ body {
   top: -30px;
   left: 30px;
   font-size: 30px;
+  font-weight: bold;
   padding: 5px 20px;
 }
 
@@ -1316,5 +1345,28 @@ body {
   }
   .hamburger.is-open span:nth-child(3) {
     transform: translateY(0) rotate(-45deg);
+  }
+
+  .scrolly__pin {
+    padding: 24px 16px;
+    place-items: center;
+  }
+
+  .scene {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .scene__text {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .scene__img {
+    margin-inline: auto;
   }
 }
