@@ -8,14 +8,9 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   --container: 1120px;
   --gutter: clamp(16px, 3vw, 28px);
-
-  /* headerの実高と合わせる */
   --header-h: 70px;
-
   --font-normal: 500;
   --font-bold: bold;
-
-  /* bodyで参照されているが未定義だったため追加 */
   --bg: #ffffff;
 }
 
@@ -43,7 +38,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: #ffffff;
+  background: var(--bg);
   display: block;
 }
 
@@ -86,9 +81,6 @@ body {
   z-index: 1;
 }
 
-.logo {
-}
-
 .gnav {
   display: flex;
   gap: 20px;
@@ -111,7 +103,6 @@ body {
 }
 
 /* =========common========= */
-
 .schedule,
 .cta,
 .schedule + .overview,
@@ -212,7 +203,6 @@ body {
 }
 
 /* =========Concept========= */
-
 .concept {
   text-align: center;
   margin-top: 100px;
@@ -225,22 +215,21 @@ body {
 
 .concept-box {
   width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   position: relative;
   border: 2px solid var(--green);
   padding: 50px 20px 30px;
-  margin-bottom: 100px;
   background: var(--wh);
 }
 
 .concept-title {
   position: absolute;
-  background: var(--green);
-  color: var(--wh);
   top: -30px;
   left: 30px;
   font-size: 30px;
   padding: 10px 20px;
+  background: var(--green);
+  color: var(--wh);
 }
 
 .concept-card {
@@ -256,11 +245,11 @@ body {
 }
 
 .concept-card-box img {
-  background: #0d1b2a;
   width: 100%;
   height: 250px;
   object-fit: cover;
   display: block;
+  background: #0d1b2a;
 }
 
 .concept-subtitle {
@@ -279,13 +268,11 @@ body {
 
 .outro-text {
   width: min(700px, 100%);
-  margin: 30px auto;
+  margin: 50px auto 30px;
   text-align: center;
-  margin-top: 50px;
 }
 
 /* =========Company========= */
-
 .company {
   margin-top: 100px;
 }
@@ -329,7 +316,6 @@ body {
   white-space: nowrap;
 }
 
-/* 既存のgrid配置 */
 .item-a {
   grid-column: 1 / span 2;
 }
@@ -361,7 +347,6 @@ body {
   grid-column: 3;
 }
 
-/* ===== 画像を暗くするオーバーレイ ===== */
 .item::after {
   content: "";
   position: absolute;
@@ -400,7 +385,6 @@ body {
   max-width: 90%;
 }
 
-/* ===== PCだけ hover 演出を有効化 ===== */
 @media (hover: hover) and (pointer: fine) {
   .item:hover::after {
     opacity: 1;
@@ -413,15 +397,6 @@ body {
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .item::after {
-    opacity: 0;
-  }
-
-  .item-text {
-    opacity: 0;
-    transform: none;
-  }
-
   .item {
     cursor: pointer;
   }
@@ -436,7 +411,6 @@ body {
   position: fixed;
   inset: 0;
   margin: auto;
-
   border: none;
   padding: 0;
   width: min(92vw, 560px);
@@ -445,7 +419,6 @@ body {
   overflow: hidden;
 }
 
-/* 中身が多い場合は中だけスクロール */
 .photo-modal-body {
   display: grid;
   gap: 12px;
@@ -507,7 +480,7 @@ body {
 .scrolly {
   position: relative;
   height: 400vh;
-  transition: background-color 0.6s ease; /* ふわっと切り替え */
+  transition: background-color 0.6s ease;
 }
 
 .scrolly.is-scene-0 {
@@ -526,7 +499,6 @@ body {
   background: #ffe8f0;
 }
 
-/* 固定される表示枠 */
 .scrolly__pin {
   position: sticky;
   top: 0;
@@ -536,7 +508,6 @@ body {
   padding: 24px;
 }
 
-/* 表示カード（切り替わる中身） */
 .scene {
   width: min(100%, 980px);
   display: grid;
@@ -616,14 +587,14 @@ body {
 
 .overview-boxtitle {
   position: absolute;
-  background: var(--green);
-  border-radius: 30px;
-  color: var(--wh);
   top: -30px;
   left: 30px;
   font-size: 30px;
   font-weight: bold;
   padding: 5px 20px;
+  background: var(--green);
+  border-radius: 30px;
+  color: var(--wh);
 }
 
 /* ===== comments ===== */
@@ -674,7 +645,6 @@ body {
   background: var(--wh);
 }
 
-/* detailsの余白リセット（任意） */
 .faq-item details {
   margin: 0;
 }
@@ -682,26 +652,18 @@ body {
 /* =========================
    FAQ：UI最終調整（色変更なし）
    ========================= */
-
-/* summaryを“押せるブロック”として明確化 */
 .faq-item summary {
   list-style: none;
   cursor: pointer;
   user-select: none;
-
   display: grid;
-  grid-template-columns: 1.5em 1fr 28px; /* Q / テキスト / アイコン */
+  grid-template-columns: 1.5em 1fr 28px;
   column-gap: 10px;
   align-items: center;
-
-  padding: 14px 14px;
+  padding: 14px;
   border-radius: 18px;
-
-  /* 既存デザインに寄せる（色は変えない） */
   background: transparent;
   border: none;
-
-  /* 押せる感は“動き”だけで表現 */
   transition: transform 0.12s ease;
 }
 
@@ -709,7 +671,6 @@ body {
   display: none;
 }
 
-/* Q */
 .faq-item summary::before {
   content: "Q";
   font-size: 20px;
@@ -717,13 +678,11 @@ body {
   color: #000;
 }
 
-/* summary内のh3は構造だけ使う */
 .faq-item summary > h3 {
   margin: 0;
   display: contents;
 }
 
-/* ＋／− アイコン（背景は黒固定） */
 .faq-item summary::after {
   content: "+";
   display: grid;
@@ -738,34 +697,28 @@ body {
   justify-self: end;
 }
 
-/* open時は − */
 .faq-item details[open] > summary::after {
   content: "−";
 }
 
-/* hover時：色は変えない、わずかに浮かすだけ */
 @media (hover: hover) and (pointer: fine) {
   .faq-item summary:hover {
     transform: translateY(-1px);
   }
 }
 
-/* タップ時（モバイル） */
 .faq-item summary:active {
   transform: scale(0.98);
 }
 
-/* キーボード操作用（色は変えず枠線だけ） */
 .faq-item summary:focus-visible {
   outline: 2px solid #000;
   outline-offset: 3px;
 }
 
-/* 回答（A） */
 .faq-item details > p {
   margin: 12px 6px 0;
   padding-top: 12px;
-
   display: grid;
   grid-template-columns: 1.5em 1fr;
   column-gap: 10px;
@@ -779,11 +732,11 @@ body {
   color: #000;
 }
 
-/* QとAの区切り（色は増やさない） */
 .faq-item details[open] > p {
   border-top: 1px dashed #000;
 }
 
+/* =========CTA========= */
 .cta-inner {
   position: relative;
   height: 350px;
@@ -919,40 +872,9 @@ body {
   border-color: rgba(255, 255, 255, 0.42);
 }
 
-/* --- responsive diff --- */
-@media (max-width: 768px) {
-  .footer {
-    margin-top: 80px;
-  }
-
-  .footer-inner {
-    padding-block: 40px 20px;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .footer-nav {
-    min-width: auto;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-toplink {
-    align-self: flex-end;
-  }
-}
-
 /* =========================================
    Responsive (diff only)
    ========================================= */
-
-/* --- Tablet (<= 1024px) --- */
 @media (max-width: 1024px) {
   .header-inner {
     padding: 10px 20px;
@@ -1002,7 +924,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* 3列前提の配置を2列に寄せる（崩れ防止） */
   .item-a,
   .item-b,
   .item-c,
@@ -1018,7 +939,7 @@ body {
 
   .item-a,
   .item-g {
-    grid-column: 1 / -1; /* 横長だけ全幅 */
+    grid-column: 1 / -1;
   }
 
   .scene {
@@ -1039,14 +960,9 @@ body {
   }
 }
 
-/* --- Mobile (<= 768px) --- */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
-  }
-
-  .header {
-    height: var(--header-h);
   }
 
   .header-inner {
@@ -1056,11 +972,6 @@ body {
   .logo {
     width: 44px;
     height: 44px;
-  }
-
-  .gnav {
-    gap: 10px;
-    font-size: 14px;
   }
 
   .flex {
@@ -1087,10 +998,6 @@ body {
   .overview + .comments,
   .comments + .faq {
     margin-top: 64px;
-  }
-
-  .hero {
-    padding-top: var(--header-h);
   }
 
   .hero-inner {
@@ -1142,7 +1049,9 @@ body {
   }
 
   .concept-card-box {
+    width: min(340px, 100%);
     border-radius: 18px;
+    margin-inline: auto;
   }
 
   .concept-card-box img {
@@ -1172,8 +1081,8 @@ body {
   }
 
   .overview-box {
-    border-radius: 18px;
     width: min(520px, 100%);
+    border-radius: 18px;
     padding: 44px 16px 20px;
     margin-bottom: 20px;
   }
@@ -1225,8 +1134,25 @@ body {
     font-size: 14px;
   }
 
+  .scrolly__pin {
+    padding: 24px 16px;
+    place-items: center;
+  }
+
   .scene {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .scene__text {
+    width: 100%;
+    margin-inline: auto;
+    padding-right: 0;
   }
 
   .scene__title {
@@ -1235,11 +1161,130 @@ body {
 
   .scene__img {
     max-width: 280px;
-    margin: 0 auto;
+    margin-inline: auto;
+  }
+
+  .footer {
+    margin-top: 80px;
+  }
+
+  .footer-inner {
+    padding-block: 40px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .footer-nav {
+    min-width: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-toplink {
+    align-self: flex-end;
   }
 }
 
-/* --- Small Mobile (<= 480px) --- */
+/* =========================================
+   Hamburger
+   ========================================= */
+.hamburger {
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .gnav {
+    position: fixed;
+    top: var(--header-h);
+    right: 0;
+    width: min(84vw, 360px);
+    height: calc(100vh - var(--header-h));
+    padding: 20px 18px;
+    background: var(--green);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    z-index: 60;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .gnav.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hamburger {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 61;
+  }
+
+  .hamburger span {
+    position: absolute;
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    border-radius: 999px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .hamburger span:nth-child(1) {
+    transform: translateY(-8px);
+  }
+
+  .hamburger span:nth-child(3) {
+    transform: translateY(8px);
+  }
+
+  .hamburger.is-open span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .hamburger.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.is-open span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  .concept-card .flex {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .splide__arrow {
+    display: none;
+  }
+
+  .splide__pagination {
+    bottom: -18px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-subtext {
     font-size: 16px;
@@ -1263,110 +1308,5 @@ body {
 
   .cta-inner {
     height: 220px;
-  }
-}
-
-/* =========================================
-   Hamburger
-   ========================================= */
-
-.hamburger {
-  display: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-@media (max-width: 768px) {
-  .gnav {
-    position: fixed;
-    top: var(--header-h);
-    right: 0;
-    width: min(84vw, 360px);
-    height: calc(100vh - var(--header-h));
-    padding: 20px 18px;
-    background: var(--green); /* --mainベース */
-    backdrop-filter: blur(6px);
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    z-index: 60;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  /* 開いた状態 */
-  .gnav.is-open {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* ハンバーガーボタン */
-  .hamburger {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-    z-index: 61; /* gnavより前 */
-  }
-
-  .hamburger span {
-    position: absolute;
-    width: 26px;
-    height: 2px;
-    background: #fff;
-    border-radius: 999px;
-    transition: transform 0.25s ease, opacity 0.2s ease;
-  }
-
-  .hamburger span:nth-child(1) {
-    transform: translateY(-8px);
-  }
-  .hamburger span:nth-child(2) {
-    transform: translateY(0);
-  }
-  .hamburger span:nth-child(3) {
-    transform: translateY(8px);
-  }
-
-  /* 開いた時の× */
-  .hamburger.is-open span:nth-child(1) {
-    transform: translateY(0) rotate(45deg);
-  }
-  .hamburger.is-open span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.is-open span:nth-child(3) {
-    transform: translateY(0) rotate(-45deg);
-  }
-
-  .scrolly__pin {
-    padding: 24px 16px;
-    place-items: center;
-  }
-
-  .scene {
-    width: 100%;
-    max-width: 520px;
-    margin-inline: auto;
-    justify-items: center;
-    text-align: center;
-    gap: 16px;
-  }
-
-  .scene__text {
-    width: 100%;
-    margin-inline: auto;
-  }
-
-  .scene__img {
-    margin-inline: auto;
   }
 }
