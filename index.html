@@ -67,8 +67,6 @@
     />
     <link rel="stylesheet" href="./css/distyle.css" />
     <link rel="stylesheet" href="./css/main.css" />
-
-    <!-- 構造化データ（FAQ + イベント系は後述で追記推奨） -->
   </head>
 
   <body id="top">
@@ -78,7 +76,7 @@
         <p class="giga">ミライキャリアJORNEY</p>
 
         <nav aria-label="グローバルナビゲーション">
-          <ul class="gnav giga">
+          <ul id="global-menu" class="gnav giga">
             <li><a href="#concept">コンセプト</a></li>
             <li><a href="#company">参加企業</a></li>
             <li><a href="#schedule">日程</a></li>
@@ -106,7 +104,6 @@
     <main id="main">
       <!-- hero -->
       <section class="hero" aria-label="メインビジュアル">
-        <!-- 背景をCSSで当ててるならdivのままでOK。imgにできるならこちらがベター -->
         <div
           class="hero-bg"
           role="img"
@@ -204,7 +201,7 @@
         class="container company"
         aria-labelledby="company-title"
       >
-        <h2 class="company-title giga" id="company-title">COMPANYS</h2>
+        <h2 class="company-title giga" id="company-title">COMPANIES</h2>
         <p class="sub-title">参加企業</p>
 
         <div class="photo-grid" role="list">
@@ -215,6 +212,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">総合建設業</span>
             <div class="item-text">
               <p>株式会社 北島建設</p>
               <p class="item-subtext">
@@ -230,6 +228,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">自動車販売・整備</span>
             <div class="item-text">
               <p>アウトクラスカーズ</p>
               <p class="item-subtext">
@@ -245,6 +244,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">機械レンタル・販売</span>
             <div class="item-text">
               <p>喜多機械産業株式会社</p>
               <p class="item-subtext">
@@ -260,6 +260,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">建設コンサルタント</span>
             <div class="item-text">
               <p>株式会社フジタ建設コンサルタント</p>
               <p class="item-subtext">
@@ -275,6 +276,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">デザイン・WEB制作</span>
             <div class="item-text">
               <p>株式会社AND</p>
               <p class="item-subtext">
@@ -290,6 +292,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">医療用繊維製造</span>
             <div class="item-text">
               <p>東光株式会社</p>
               <p class="item-subtext">
@@ -305,6 +308,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">教育保育</span>
             <div class="item-text">
               <p>ナーサリー富田幼児園</p>
               <p class="item-subtext">
@@ -320,6 +324,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">スポーツビジネス</span>
             <div class="item-text">
               <p>徳島ヴォルティス株式会社</p>
               <p class="item-subtext">
@@ -335,6 +340,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">放送局（ラジオ）</span>
             <div class="item-text">
               <p>株式会社エフエムびざん</p>
               <p class="item-subtext">
@@ -350,6 +356,7 @@
               loading="lazy"
               decoding="async"
             />
+            <span class="item-tag">鉄骨製造業</span>
             <div class="item-text">
               <p>株式会社 応神鉄工</p>
               <p class="item-subtext">
@@ -366,7 +373,7 @@
             <div class="photo-modal-body">
               <img class="photo-modal-img" alt="" />
               <div class="photo-modal-text">
-                <h3 class="photo-modal-title"></h3>
+                <p class="photo-modal-title"></p>
                 <p class="photo-modal-desc"></p>
               </div>
             </div>
@@ -381,22 +388,9 @@
         class="container-full schedule"
         aria-labelledby="schedule-title"
       >
-        <h2
-          class="giga"
-          id="schedule-title"
-          style="
-            position: absolute;
-            left: -9999px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-          "
-        >
-          日程
-        </h2>
+        <h2 class="giga sr-only" id="schedule-title">SCHEDULE</h2>
 
-        <div class="scrolly" id="scrolly" aria-label="紙芝居セクション">
+        <div class="scrolly" id="scrolly" aria-label="SCHEDULE">
           <div class="scrolly__pin">
             <div class="scene fade" id="scene">
               <div class="scene__text">
@@ -656,7 +650,7 @@
           <nav class="footer-nav" aria-label="フッターナビ">
             <ul class="footer-list">
               <li><a class="footer-link" href="#concept">CONCEPT</a></li>
-              <li><a class="footer-link" href="#company">COMPANY</a></li>
+              <li><a class="footer-link" href="#company">COMPANIES</a></li>
               <li><a class="footer-link" href="#comments">COMMENTS</a></li>
               <li><a class="footer-link" href="#faq">Q&amp;A</a></li>
               <li><a class="footer-link" href="#privacy">PRIVACY POLICY</a></li>
@@ -679,7 +673,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="./js/main.js"></script>
 
-    <!-- FAQ構造化データ（内容と一致させる） -->
+    <!-- FAQ構造化データ-->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
