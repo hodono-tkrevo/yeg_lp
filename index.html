@@ -70,6 +70,19 @@
   </head>
 
   <body id="top">
+    <!-- Opening / Loading -->
+    <div class="opening" id="opening">
+      <div class="opening__center">
+        <h1 class="opening__title giga">ミライキャリア<br />JOURNEY</h1>
+
+        <div class="loading-bar">
+          <span class="loading-bar__progress" id="loadingBar"></span>
+        </div>
+
+        <p class="loading-text" id="loadingText">LOADING...</p>
+      </div>
+    </div>
+
     <!-- header -->
     <header class="header">
       <div class="header-inner">
@@ -83,7 +96,11 @@
             <li><a href="#comments">参加者の声</a></li>
             <li><a href="#faq">Q&amp;A</a></li>
             <li class="btn">
-              <a href="#apply">参加申込</a>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd_ry4xUBBk2K4boLsE7PH5499pbzepXfmzl5sA0lyU7K9Rsg/viewform"
+                target="_blank"
+                >参加申込</a
+              >
             </li>
           </ul>
 
@@ -107,7 +124,7 @@
         <div
           class="hero-bg"
           role="img"
-          aria-label="都市の夜景とテクノロジーを想起させるビジュアル"
+          aria-label="ミライキャリアJORNEYのメインビジュアル"
         ></div>
 
         <div class="container hero-inner">
@@ -125,6 +142,7 @@
       </section>
       <!-- ed hero -->
 
+      <!-- 背景アニメーション -->
       <canvas id="meteor-canvas" aria-hidden="true"></canvas>
 
       <!-- concept -->
@@ -186,7 +204,7 @@
             <p>
               <span class="marker">「働くって、どんな感じなんだろう？」</span
               ><br />
-              そんな疑問を、実際の仕事にふれながら確かめてみませんか？<br />
+              そんな疑問を、実際の仕事にふれながら確かめてみませんか？
               インターンシップでは学校では知ることのできない仕事や大人のリアルに出会えます。<br />
               地元・徳島で働く選択肢を知ることが、あなたの将来を考えるヒントになるはずです。
             </p>
@@ -206,163 +224,183 @@
 
         <div class="photo-grid" role="list">
           <div class="item item-a" role="listitem">
-            <img
-              src="./img/img01.jpeg"
-              alt="株式会社 北島建設の職場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">総合建設業</span>
-            <div class="item-text">
-              <p>株式会社 北島建設</p>
-              <p class="item-subtext">
-                徳島に根ざした建設会社。「建築」と「土木」の両面から、住宅や公共施設など地図に残る仕事のやりがいを、設計・施工の現場で学びます。
-              </p>
-            </div>
+            <a href="https://kitajimakensetsu.co.jp/" target="_blank">
+              <img
+                src="./img/kitazima.jpg"
+                alt="株式会社 北島建設の職場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">総合建設業</span>
+              <div class="item-text">
+                <p>株式会社 北島建設</p>
+                <p class="item-subtext">
+                  徳島に根ざした建設会社。「建築」と「土木」の両面から、住宅や公共施設など地図に残る仕事のやりがいを、設計・施工の現場で学びます。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-b" role="listitem">
-            <img
-              src="./img/img02.jpeg"
-              alt="アウトクラスカーズの職場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">自動車販売・整備</span>
-            <div class="item-text">
-              <p>アウトクラスカーズ</p>
-              <p class="item-subtext">
-                徳島発のカスタムカー専門店。ジムニーを中心とした車両販売・整備や、アウトドアライフの提案など、"好き"を仕事にする現場を体感できます。
-              </p>
-            </div>
+            <a href="https://outclasscars.jp/" target="_blank">
+              <img
+                src="./img/img02.jpeg"
+                alt="アウトクラスカーズの職場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">自動車販売・整備</span>
+              <div class="item-text">
+                <p>アウトクラスカーズ</p>
+                <p class="item-subtext">
+                  徳島発のカスタムカー専門店。ジムニーを中心とした車両販売・整備や、アウトドアライフの提案など、"好き"を仕事にする現場を体感できます。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-c" role="listitem">
-            <img
-              src="./img/img03.jpeg"
-              alt="喜多機械産業株式会社の職場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">機械レンタル・販売</span>
-            <div class="item-text">
-              <p>喜多機械産業株式会社</p>
-              <p class="item-subtext">
-                まちづくりを支える建設機械のレンタル・販売・修理を展開。多種多様な機械を扱い、インフラ整備の裏側を支える重要な役割を体験します。
-              </p>
-            </div>
+            <a href="https://kitakikai.co.jp/" target="_blank">
+              <img
+                src="./img/kitakikai.jpg"
+                alt="喜多機械産業株式会社の職場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">機械レンタル・販売</span>
+              <div class="item-text">
+                <p>喜多機械産業株式会社</p>
+                <p class="item-subtext">
+                  まちづくりを支える建設機械のレンタル・販売・修理を展開。多種多様な機械を扱い、インフラ整備の裏側を支える重要な役割を体験します。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-d" role="listitem">
-            <img
-              src="./img/img04.jpeg"
-              alt="株式会社フジタ建設コンサルタントの職場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">建設コンサルタント</span>
-            <div class="item-text">
-              <p>株式会社フジタ建設コンサルタント</p>
-              <p class="item-subtext">
-                地域の社会基盤を支える技術者集団。道路や河川などの測量・設計・調査を通じて、安全で安心なまちづくりの基礎（プランニング）を学びます。
-              </p>
-            </div>
+            <a href="https://fujitacc.co.jp/" target="_blank">
+              <img
+                src="./img/img04.jpeg"
+                alt="株式会社フジタ建設コンサルタントの職場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">建設コンサルタント</span>
+              <div class="item-text">
+                <p>株式会社フジタ建設コンサルタント</p>
+                <p class="item-subtext">
+                  地域の社会基盤を支える技術者集団。道路や河川などの測量・設計・調査を通じて、安全で安心なまちづくりの基礎（プランニング）を学びます。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-e" role="listitem">
-            <img
-              src="./img/img05.jpeg"
-              alt="株式会社ANDの職場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">デザイン・WEB制作</span>
-            <div class="item-text">
-              <p>株式会社AND</p>
-              <p class="item-subtext">
-                デザインとITで地域を元気にするクリエイティブ企業。Webサイト制作やイベント企画など、アイデアを形にして発信するプロセスを体験します。
-              </p>
-            </div>
+            <a href="https://and-support.com/" target="_blank">
+              <img
+                src="./img/img05.jpeg"
+                alt="株式会社ANDの職場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">デザイン・WEB制作</span>
+              <div class="item-text">
+                <p>株式会社AND</p>
+                <p class="item-subtext">
+                  デザインとITで地域を元気にするクリエイティブ企業。Webサイト制作やイベント企画など、アイデアを形にして発信するプロセスを体験します。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-f" role="listitem">
-            <img
-              src="./img/img06.jpeg"
-              alt="東光株式会社の職場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">医療用繊維製造</span>
-            <div class="item-text">
-              <p>東光株式会社</p>
-              <p class="item-subtext">
-                医療用弾性ストッキングやサポーターの製造販売メーカー。国内一貫生産にこだわり、確かな技術で人々の健康を足元から支えるものづくりを体験します。
-              </p>
-            </div>
+            <a href="https://toko-inc.co.jp/" target="_blank">
+              <img
+                src="./img/toko.jpg"
+                alt="東光株式会社の職場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">医療用繊維製造</span>
+              <div class="item-text">
+                <p>東光株式会社</p>
+                <p class="item-subtext">
+                  医療用弾性ストッキングやサポーターの製造販売メーカー。国内一貫生産にこだわり、確かな技術で人々の健康を足元から支えるものづくりを体験します。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-g" role="listitem">
-            <img
-              src="./img/img07.jpeg"
-              alt="ナーサリー富田幼児園の活動イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">教育保育</span>
-            <div class="item-text">
-              <p>ナーサリー富田幼児園</p>
-              <p class="item-subtext">
-                「生きる力」を育む幼児教育・保育の現場。子どもたち一人ひとりと向き合い、成長を支える先生の仕事のやりがいや責任を肌で感じられます。
-              </p>
-            </div>
+            <a href="https://www.nurserytomida.com/" target="_blank">
+              <img
+                src="./img/nursery.jpg"
+                alt="ナーサリー富田幼児園の活動イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">教育保育</span>
+              <div class="item-text">
+                <p>ナーサリー富田幼児園</p>
+                <p class="item-subtext">
+                  「生きる力」を育む幼児教育・保育の現場。子どもたち一人ひとりと向き合い、成長を支える先生の仕事のやりがいや責任を肌で感じられます。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-h" role="listitem">
-            <img
-              src="./img/img08.jpeg"
-              alt="徳島ヴォルティス株式会社の運営イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">スポーツビジネス</span>
-            <div class="item-text">
-              <p>徳島ヴォルティス株式会社</p>
-              <p class="item-subtext">
-                Jリーグ加盟のプロサッカークラブ運営。試合運営、広報、ホームタウン活動など、スポーツを通じて地域を活性化させる仕事を学びます。
-              </p>
-            </div>
+            <a href="https://www.vortis.jp/" target="_blank">
+              <img
+                src="./img/img08.jpeg"
+                alt="徳島ヴォルティス株式会社の運営イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">スポーツビジネス</span>
+              <div class="item-text">
+                <p>徳島ヴォルティス株式会社</p>
+                <p class="item-subtext">
+                  Jリーグ加盟のプロサッカークラブ運営。試合運営、広報、ホームタウン活動など、スポーツを通じて地域を活性化させる仕事を学びます。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-i" role="listitem">
-            <img
-              src="./img/img09.jpeg"
-              alt="株式会社エフエムびざんの放送制作イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">放送局（ラジオ）</span>
-            <div class="item-text">
-              <p>株式会社エフエムびざん</p>
-              <p class="item-subtext">
-                地域密着のコミュニティFM放送局（B-FM791）。ラジオ番組の制作や生放送の現場に触れ、声と音で地域情報を届けるメディアの役割を体験します。
-              </p>
-            </div>
+            <a href="http://www.bfm.jp/" target="_blank">
+              <img
+                src="./img/img09.jpeg"
+                alt="株式会社エフエムびざんの放送制作イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">放送局（ラジオ）</span>
+              <div class="item-text">
+                <p>株式会社エフエムびざん</p>
+                <p class="item-subtext">
+                  地域密着のコミュニティFM放送局（B-FM791）。ラジオ番組の制作や生放送の現場に触れ、声と音で地域情報を届けるメディアの役割を体験します。
+                </p>
+              </div>
+            </a>
           </div>
 
           <div class="item item-j" role="listitem">
-            <img
-              src="./img/img10.jpeg"
-              alt="株式会社 応神鉄工の製造現場イメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="item-tag">鉄骨製造業</span>
-            <div class="item-text">
-              <p>株式会社 応神鉄工</p>
-              <p class="item-subtext">
-                建物の骨組みとなる「鉄骨」の製造。巨大な建築物を支えるダイナミックな鉄骨加工技術や、CADを使った図面作成など、ものづくりの真髄に触れます。
-              </p>
-            </div>
+            <a href="https://www.ohjin-tekko.com/" target="_blank">
+              <img
+                src="./img/ohjin.jpg"
+                alt="株式会社 応神鉄工の製造現場イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="item-tag">鉄骨製造業</span>
+              <div class="item-text">
+                <p>株式会社 応神鉄工</p>
+                <p class="item-subtext">
+                  建物の骨組みとなる「鉄骨」の製造。巨大な建築物を支えるダイナミックな鉄骨加工技術や、CADを使った図面作成など、ものづくりの真髄に触れます。
+                </p>
+              </div>
+            </a>
           </div>
 
           <dialog class="photo-modal" id="photo-modal" aria-label="企業詳細">
@@ -375,12 +413,94 @@
               <div class="photo-modal-text">
                 <p class="photo-modal-title"></p>
                 <p class="photo-modal-desc"></p>
+                <p class="photo-modal-link"></p>
               </div>
             </div>
           </dialog>
         </div>
       </section>
       <!-- ed company -->
+
+      <!-- movie -->
+      <section class="container-full movie">
+        <h2 class="movie-title giga">MOVIE</h2>
+        <div class="sub-title">企業紹介動画</div>
+        <div
+          class="company-movie container-full"
+          aria-label="企業紹介動画（自動スライド）"
+        >
+          <div class="company-movie__track">
+            <!-- set 1 -->
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+
+            <!-- set 2（!!!!!set 1を丸ごと複製してください!!!!） -->
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <video
+              src="./img/company.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+          </div>
+        </div>
+      </section>
+      <!-- ed movie -->
 
       <!-- schedule -->
       <section
@@ -629,12 +749,18 @@
 
           <div class="cta-content">
             <p>あなたの「みらい」一緒につくりませんか？</p>
-            <a href="#" class="cta-btn">参加申込はこちら</a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd_ry4xUBBk2K4boLsE7PH5499pbzepXfmzl5sA0lyU7K9Rsg/viewform"
+              target="_blank"
+              class="cta-btn"
+              >参加申込はこちら</a
+            >
           </div>
         </div>
       </section>
     </main>
 
+    <!-- footer -->
     <footer class="footer">
       <div class="footer-inner container">
         <div class="footer-top">
@@ -643,19 +769,41 @@
               ミライキャリアJORNEY
             </p>
             <p class="footer-text">
-              この事業は、地域と次世代をつなぐ架け橋として、若者の地域定着と企業価値向上を目指しています。単なる職場体験ではなく、地域の未来を共に創造するプログラムです。
+              この事業は、地域と次世代をつなぐ架け橋として、若者の地域定着と企業価値向上を目指しています。
+              単なる職場体験ではなく、地域の未来を共に創造するプログラムです。
             </p>
+
+            <div class="footer-inquiry">
+              <span>お問い合わせ先</span>（徳島商工会議所青年部）
+              <p class="footer-text-small">
+                〒770-8530 徳島県徳島市南末広町5番8-8号
+              </p>
+              <p class="footer-text-small">
+                TEL：088-653-3213<br />FAX：088-623-8504
+              </p>
+              <p class="footer-text-small">
+                <a href="mailto:tokuyeg@tokushimacci.or.jp">
+                  E-mail：tokuyeg@tokushimacci.or.jp
+                </a>
+              </p>
+            </div>
           </div>
 
-          <nav class="footer-nav" aria-label="フッターナビ">
-            <ul class="footer-list">
-              <li><a class="footer-link" href="#concept">CONCEPT</a></li>
-              <li><a class="footer-link" href="#company">COMPANIES</a></li>
-              <li><a class="footer-link" href="#comments">COMMENTS</a></li>
-              <li><a class="footer-link" href="#faq">Q&amp;A</a></li>
-              <li><a class="footer-link" href="#privacy">PRIVACY POLICY</a></li>
-            </ul>
-          </nav>
+          <div class="footer-right">
+            <nav class="footer-nav" aria-label="フッターナビ">
+              <ul class="footer-list">
+                <li><a class="footer-link" href="#concept">CONCEPT</a></li>
+                <li><a class="footer-link" href="#company">COMPANIES</a></li>
+                <li><a class="footer-link" href="#comments">COMMENTS</a></li>
+                <li><a class="footer-link" href="#faq">Q&amp;A</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer-sponsorship">
+              <p>主催：徳島商工会議所青年部（YEG）</p>
+              <p>後援：⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎</p>
+            </div>
+          </div>
         </div>
 
         <div class="footer-bottom">
@@ -668,6 +816,7 @@
         </div>
       </div>
     </footer>
+    <!-- ed footer -->
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
