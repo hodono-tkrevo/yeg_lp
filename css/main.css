@@ -105,6 +105,7 @@ body {
 /* =========common========= */
 .schedule,
 .cta,
+.movie,
 .schedule + .overview,
 .overview + .comments,
 .comments + .faq {
@@ -115,7 +116,8 @@ body {
 .schedule,
 .overview,
 .comments,
-.faq {
+.faq,
+.movie {
   text-align: center;
 }
 
@@ -123,7 +125,8 @@ body {
 .schedule-title,
 .overview-title,
 .comments-title,
-.faq-title {
+.faq-title,
+.movie-title {
   font-size: 40px;
 }
 
@@ -172,6 +175,14 @@ body {
   transform: scale(1.02);
 }
 
+/* SP*/
+@media (max-width: 768px) {
+  .hero-bg {
+    background-image: url("../img/sp-kv.jpg");
+    background-position: center;
+  }
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -183,6 +194,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
 }
 
 .hero-title {
@@ -193,6 +205,18 @@ body {
   font-size: 100px;
   text-align: left;
   text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    transform: translateY(-130px);
+
+    .hero-subtext,
+    .hero-title {
+      text-align: center;
+      text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+  }
 }
 
 .hero-kicker {
@@ -375,6 +399,7 @@ body {
   z-index: 1;
   padding: 16px;
   gap: 10px;
+  margin-top: 30px;
 }
 
 .item-subtext {
@@ -383,6 +408,41 @@ body {
   font-weight: normal;
   line-height: 1.7;
   max-width: 90%;
+}
+
+.company-movie {
+  width: 100%;
+  overflow: hidden;
+}
+
+.company-movie__track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: company-movie-marquee 18s linear infinite;
+  will-change: transform;
+}
+
+.company-movie:hover .company-movie__track {
+  animation-play-state: paused;
+}
+
+.company-movie video {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #000;
+  border-radius: 12px;
+}
+
+@keyframes company-movie-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -463,6 +523,21 @@ body {
   color: #fff;
   font-size: 22px;
   line-height: 1;
+}
+
+.photo-modal-link {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.photo-modal-link a {
+  padding: 10px 15px;
+  background: var(--green);
+  color: var(--wh);
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* 紙芝居 */
@@ -799,24 +874,58 @@ body {
 .footer-top {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  align-items: flex-start;
+  gap: 40px;
 }
 
+/* 左 */
 .footer-brand {
   width: min(520px, 100%);
 }
 
+/* 右 */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-sponsorship {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.86);
+}
+
 .footer-titile {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-text {
   margin: 0;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.86);
+  font-size: 16px;
+}
+
+.footer-inquiry {
+  border: 1px solid var(--wh);
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-top: 15px;
+}
+
+.footer-inquiry span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-text-small {
+  font-size: 18px;
+}
+
+.footer-sponsorship {
+  display: block;
 }
 
 .footer-nav {
@@ -853,6 +962,7 @@ body {
 
 .footer-copy {
   color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
 }
 
 .footer-toplink {
@@ -888,12 +998,14 @@ body {
   .schedule-title,
   .overview-title,
   .comments-title,
-  .faq-title {
+  .faq-title,
+  .movie-title {
     font-size: 34px;
   }
 
   .schedule,
   .cta,
+  .movie,
   .schedule + .overview,
   .overview + .comments,
   .comments + .faq {
@@ -983,7 +1095,8 @@ body {
   .schedule-title,
   .overview-title,
   .comments-title,
-  .faq-title {
+  .faq-title,
+  .movie-title {
     font-size: 28px;
   }
 
@@ -994,6 +1107,7 @@ body {
 
   .schedule,
   .cta,
+  .movie,
   .schedule + .overview,
   .overview + .comments,
   .comments + .faq {
@@ -1283,6 +1397,23 @@ body {
   .splide__pagination {
     bottom: -18px;
   }
+
+  .company-movie video {
+    width: 240px;
+    height: 160px;
+  }
+  .company-movie__track {
+    animation-duration: 22s;
+  }
+
+  .footer-inquiry span {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .footer-text-small {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1309,4 +1440,63 @@ body {
   .cta-inner {
     height: 220px;
   }
+}
+
+/* opening 全体 */
+.opening {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/sub-kv.jpg) center / cover no-repeat;
+  color: var(--text);
+  transition: opacity 0.6s ease;
+}
+
+/* 中央ブロック */
+.opening__center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* タイトル */
+.opening__title {
+  font-size: clamp(36px, 8vw, 64px);
+  letter-spacing: 0.12em;
+}
+
+/* バー外枠 */
+.loading-bar {
+  width: 240px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+/* バー本体 */
+.loading-bar__progress {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), #9de3e4);
+  transition: width 0.2s linear;
+}
+
+/* テキスト */
+.loading-text {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  opacity: 0.7;
+}
+
+/* 消える時 */
+.opening.is-hide {
+  opacity: 0;
+  pointer-events: none;
 }
