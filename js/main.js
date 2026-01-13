@@ -98,55 +98,71 @@ const splide = new Splide(".splide", {
   const modalDesc = dialog.querySelector(".photo-modal-desc");
   const modalImg = dialog.querySelector(".photo-modal-img");
   const closeBtn = dialog.querySelector(".photo-modal-close");
+  const linkEl = dialog.querySelector(".photo-modal-link"); // <p class="photo-modal-link"></p>
 
   const isSP = () => matchMedia("(hover: none) and (pointer: coarse)").matches;
 
   const openFromItem = (item) => {
     const textWrap = item.querySelector(".item-text");
     const imgNode = item.querySelector("img");
+    const aNode = item.querySelector("a");
 
-    // ✅ タイトル/本文を「.item-text 内の p」から安定して取得
     const ps = textWrap ? [...textWrap.querySelectorAll("p")] : [];
     const title = (ps[0]?.textContent || "").trim();
 
-    // 2つ目のpがあればそれを説明に。なければ .item-subtext を探す。さらに無ければ空。
     const desc =
       (ps[1]?.textContent || "").trim() ||
       (textWrap?.querySelector(".item-subtext")?.textContent || "").trim() ||
       (item.querySelector(".item-subtext")?.textContent || "").trim() ||
       "";
 
-    const src = imgNode ? imgNode.getAttribute("src") : "";
-    const alt = imgNode ? imgNode.getAttribute("alt") : title;
+    const src = imgNode?.getAttribute("src") || "";
+    const alt = imgNode?.getAttribute("alt") || title;
 
-    // モーダルへ反映
-    modalTitle.textContent = title;
-    modalDesc.textContent = desc;
+    // URL（aが無い場合も安全）
+    const url = aNode?.getAttribute("href") || "";
 
-    if (src) {
-      modalImg.src = src;
-      modalImg.alt = alt || "";
-      modalImg.style.display = "block";
-    } else {
-      modalImg.removeAttribute("src");
-      modalImg.alt = "";
-      modalImg.style.display = "none";
+    // 反映
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalDesc) modalDesc.textContent = desc;
+
+    if (modalImg) {
+      if (src) {
+        modalImg.src = src;
+        modalImg.alt = alt || "";
+        modalImg.style.display = "block";
+      } else {
+        modalImg.removeAttribute("src");
+        modalImg.alt = "";
+        modalImg.style.display = "none";
+      }
+    }
+
+    // SPだけ「HP：」表示
+    if (linkEl) {
+      if (isSP() && url) {
+        linkEl.innerHTML = `<a href="${url}" target="_blank" rel="noopener">公式サイトを見る</a>`;
+        linkEl.style.display = "block";
+      } else {
+        linkEl.style.display = "none";
+      }
     }
 
     dialog.showModal();
   };
 
-  // ✅ SPだけクリックでモーダル表示（PCはhover想定）
-  document.querySelectorAll(".photo-grid .item").forEach((item) => {
-    item.addEventListener("click", () => {
-      if (!isSP()) return;
-      openFromItem(item);
+  // ✅ ここがポイント：SP時は遷移を止めてモーダルを開く
+  document.querySelectorAll(".photo-grid .item a").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      if (!isSP()) return; // PCは通常どおりリンクでOK
+      e.preventDefault(); // ← 遷移を止める
+      const item = a.closest(".item");
+      if (item) openFromItem(item);
     });
   });
 
   closeBtn?.addEventListener("click", () => dialog.close());
 
-  // ✅ 背景クリックで閉じる（dialog外側クリック判定）
   dialog.addEventListener("click", (e) => {
     const rect = dialog.getBoundingClientRect();
     const inDialog =
@@ -154,7 +170,6 @@ const splide = new Splide(".splide", {
       e.clientY <= rect.bottom &&
       rect.left <= e.clientX &&
       e.clientX <= rect.right;
-
     if (!inDialog) dialog.close();
   });
 })();
