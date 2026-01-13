@@ -1,0 +1,147 @@
+/* =====================================================
+   Reset CSS (1px strict)
+   - border / outline / line 縺悟ｸｸ縺ｫ 1px 縺ｫ縺ｪ繧句燕謠�
+   - transform / zoom / scale 荳堺ｽｿ逕ｨ
+===================================================== */
+
+/* ---------- Global box model ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+/* ---------- HTML & Body ---------- */
+html {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+
+  /* 1px 繧呈ｭ｣遒ｺ縺ｫ謇ｱ縺�◆繧� */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+em {
+  font-style: inherit;
+}
+
+/* ---------- Links ---------- */
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Media ---------- */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  /* 1px 繝懊�繝繝ｼ縺梧ｻｲ縺ｾ縺ｪ縺�◆繧� */
+  image-rendering: auto;
+}
+
+/* ---------- Forms ---------- */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* ---------- HR / 1px line safe ---------- */
+hr {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background-color: currentColor;
+}
+
+/* ---------- Focus ---------- */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ---------- Hidden ---------- */
+[hidden] {
+  display: none !important;
+}
